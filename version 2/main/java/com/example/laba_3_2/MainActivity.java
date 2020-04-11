@@ -17,7 +17,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         dbHelper = new DbHelper(this);
-        dbHelper.recreate_table();
         bt_1 = findViewById(R.id.button1);
         bt_2 = findViewById(R.id.button2);
         bt_3 = findViewById(R.id.button3);
