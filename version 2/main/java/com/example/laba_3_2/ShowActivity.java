@@ -13,7 +13,6 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import static com.example.laba_3_2.Names.con.DATE;
-import static com.example.laba_3_2.Names.con.FIO;
 import static com.example.laba_3_2.Names.con.FIRST;
 import static com.example.laba_3_2.Names.con.ID;
 import static com.example.laba_3_2.Names.con.LAST;
@@ -30,29 +29,16 @@ public class ShowActivity extends AppCompatActivity {
         SQLiteDatabase db = dbHelper.getReadableDatabase();
         Cursor c = db.query(TABLE,null, null, null, null, null, null);
         c.moveToFirst();
-        if(db.getVersion() == 1)
-        {
-            add_row(ID, FIO, DATE, null, null);
-            do {
-                String[] s = c.getColumnNames();
-                int id = c.getInt(c.getColumnIndex(s[0]));
-                String fio = c.getString(c.getColumnIndex(s[1]));
-                String date = c.getString(c.getColumnIndex(s[2]));
-                add_row(Integer.toString(id), fio, date, null, null);
-            } while (c.moveToNext());
-        }
-        else {
-            add_row(ID, LAST, FIRST, MIDDLE, DATE);
-            do {
-                String[] s = c.getColumnNames();
-                int id = c.getInt(c.getColumnIndex(s[0]));
-                String last = c.getString(c.getColumnIndex(s[1]));
-                String first = c.getString(c.getColumnIndex(s[2]));
-                String middle = c.getString(c.getColumnIndex(s[3]));
-                String date = c.getString(c.getColumnIndex(s[4]));
-                add_row(Integer.toString(id), last, first, middle, date);
-            } while (c.moveToNext());
-        }
+        add_row(ID, LAST, FIRST, MIDDLE, DATE);
+        do {
+            String[] s = c.getColumnNames();
+            int id = c.getInt(c.getColumnIndex(s[0]));
+            String last = c.getString(c.getColumnIndex(s[1]));
+            String first = c.getString(c.getColumnIndex(s[2]));
+            String middle = c.getString(c.getColumnIndex(s[3]));
+            String date = c.getString(c.getColumnIndex(s[4]));
+            add_row(Integer.toString(id), last, first, middle, date);
+        } while (c.moveToNext());
     }
     public void add_row(String id, String last, String first, String middle, String time){
         TableLayout tl = (TableLayout) findViewById(R.id.layout);
