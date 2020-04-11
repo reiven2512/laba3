@@ -14,10 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import static com.example.laba_3_2.Names.con.DATE;
 import static com.example.laba_3_2.Names.con.FIO;
-import static com.example.laba_3_2.Names.con.FIRST;
 import static com.example.laba_3_2.Names.con.ID;
-import static com.example.laba_3_2.Names.con.LAST;
-import static com.example.laba_3_2.Names.con.MIDDLE;
 import static com.example.laba_3_2.Names.con.TABLE;
 
 public class ShowActivity extends AppCompatActivity {
