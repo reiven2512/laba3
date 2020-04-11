@@ -22,16 +22,4 @@
         android:layout_height="wrap_content"
         android:text="Add_time"
         android:gravity="center"/>
-    <TextView
-        android:id="@+id/name_4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Add_time"
-        android:gravity="center"/>
-    <TextView
-        android:id="@+id/name_5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Add_time"
-        android:gravity="center"/>
 </TableRow>
